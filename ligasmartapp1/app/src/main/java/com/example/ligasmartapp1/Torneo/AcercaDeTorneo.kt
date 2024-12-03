@@ -97,7 +97,7 @@ fun AcercaDeVista(torneoId: String?) {
             .shadow(
                 elevation = 8.dp,
                 shape = RoundedCornerShape(topStart = 0.dp, topEnd = 0.dp)
-            ) // Aplica la sombra con la elevación y forma redondeada
+            )
             .clip(RoundedCornerShape(10.dp))
             .background(Color.White)
             .fillMaxWidth() // Ocupa todo el ancho disponible
