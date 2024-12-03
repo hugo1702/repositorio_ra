@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "121763715637",
+    "firebase_url": "https://ligasmartapp-2024-default-rtdb.firebaseio.com",
+    "project_id": "ligasmartapp-2024",
+    "storage_bucket": "ligasmartapp-2024.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:121763715637:android:bc92d45431558dc1f8ef7c",
+        "android_client_info": {
+          "package_name": "com.example.ligasmartapp1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "121763715637-6o45l6vdkrfjhiloj589v8md0m4u3sut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyr2SJY-RQhGZ3hC7BLf5dAxkBw6B59-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "121763715637-6o45l6vdkrfjhiloj589v8md0m4u3sut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
