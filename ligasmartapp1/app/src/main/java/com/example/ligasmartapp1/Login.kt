@@ -463,7 +463,7 @@ fun ShowUidScreen(activity: ComponentActivity) {
         userUid = userPreferencesStore.getUserUid()
     }
 
-    // Componer la UI
+
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
