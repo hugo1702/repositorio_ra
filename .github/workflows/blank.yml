@@ -34,3 +34,11 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build
+
+      - name: Upload APK to Firebase App Distribution
+        uses: wzieba/Firebase-Distribution-Github-Action@v1
+        with:
+          appId: ${{ secrets.1:121763715637:android:bc92d45431558dc1f8ef7c }}
+          token: ${{ secrets.eyJhbGciOiJSUzI1NiIsImtpZCI6IjA2Y2YwZDZkNjk0M2M4MmU5MmMwNTYzZTcxYTcxMTJmYjNlYmFiMzUiLCJ0eXAiOiJKV1QiLCJhdWQiOiJmaXJlYmFzZS5pZGVudGl0eS5nb29nbGUuY29tIiwiaWF0IjoxNjc2OTM4Mzg0LCJleHBpcmVkX3N0YXR1cyI6ImFjdGl2ZSBhY2NvdW50IiwiZXhwIjoxNzY5NDAwMDAwLCJpZGVudGlmaWNhdGlvbl9jb250ZXh0X3N0b3J5IjoiYXJjaGl0ZWN0dXJlIiwiY2xpZW50X2lkIjoiNTZlMmVhOTI5MjdiMjc5MTM1ZTkzMTgzY2YwM2I5YjIifQ.YFgZnk5eI7v9z_bNj7FVpv3Jlf7bGmgZxJGoLgog7kUFMgyXcnQxlkJtx1dtq2ro3l2FnjPtp6gAlI9bgf4Z56NG_GXqzzMI9o9ZcKcmqNzq1rGpIjHGtdtHz8f6f8s71BzGGhvBxjsEq0cBCiF9u1Z5K7Fr36YqLn_EpzqXyG5uae_vA}}
+          groups: beta-testers
+          file: app/build/outputs/apk/release/app-release.apk
