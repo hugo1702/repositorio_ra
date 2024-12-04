@@ -472,4 +472,4 @@ fun ShowUidScreen(activity: ComponentActivity) {
             Text(text = "UID no disponible", fontSize = 10.sp)
         }
     }
-}
+
