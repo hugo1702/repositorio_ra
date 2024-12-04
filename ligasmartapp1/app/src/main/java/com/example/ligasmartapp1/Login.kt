@@ -70,39 +70,39 @@ import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeout
 
 
-@OptIn(ExperimentalComposeUiApi::class)
-@Composable
-fun Login(navController: NavHostController, activity: ComponentActivity) {
-    var username by remember { mutableStateOf("") }
-    var password by remember { mutableStateOf("") }
-    var errorMessage by remember { mutableStateOf("") }
-    var checked by remember { mutableStateOf(false) }
-    val focusManager = LocalFocusManager.current
-    val keyboardController = LocalSoftwareKeyboardController.current
-    val passwordFocusRequester = remember { FocusRequester() }
-    var isPasswordVisible by remember { mutableStateOf(false) }
-    var isLoading by remember { mutableStateOf(false) }
-
-    // Inicializar FirebaseAuth y UserPreferencesStore
-    val auth: FirebaseAuth = FirebaseAuth.getInstance()
-    val userPreferencesStore = UserPreferencesStore(activity)
-
-    fun validateInputU(input: String): String {
-        return input.filter { it.isLetterOrDigit() || it == '.' || it == '@' || it == '-' || it == '_' }.take(50)
-    }
-    fun validateInputP(input: String): String {
-        return input.take(25)
-    }
-
-    val userIcon: Painter = painterResource(id = R.drawable.userlogin)
-    val passwordIcon: Painter = painterResource(id = R.drawable.password)
-
-    BackHandler {
-        activity.finish()
-    }
-
-    Box(
-        modifier = Modifier
+//@OptIn(ExperimentalComposeUiApi::class)
+//@Composable
+//fun Login(navController: NavHostController, activity: ComponentActivity) {
+//    var username by remember { mutableStateOf("") }
+//    var password by remember { mutableStateOf("") }
+//    var errorMessage by remember { mutableStateOf("") }
+//    var checked by remember { mutableStateOf(false) }
+//    val focusManager = LocalFocusManager.current
+//    val keyboardController = LocalSoftwareKeyboardController.current
+//    val passwordFocusRequester = remember { FocusRequester() }
+//    var isPasswordVisible by remember { mutableStateOf(false) }
+//    var isLoading by remember { mutableStateOf(false) }
+//
+//    // Inicializar FirebaseAuth y UserPreferencesStore
+//    val auth: FirebaseAuth = FirebaseAuth.getInstance()
+//    val userPreferencesStore = UserPreferencesStore(activity)
+//
+//    fun validateInputU(input: String): String {
+//        return input.filter { it.isLetterOrDigit() || it == '.' || it == '@' || it == '-' || it == '_' }.take(50)
+//    }
+//    fun validateInputP(input: String): String {
+//        return input.take(25)
+//    }
+//
+//    val userIcon: Painter = painterResource(id = R.drawable.userlogin)
+//    val passwordIcon: Painter = painterResource(id = R.drawable.password)
+//
+//    BackHandler {
+//        activity.finish()
+//    }
+//
+//    Box(
+//        modifier = Modifier
             .fillMaxSize()
             .background(
                 Brush.horizontalGradient(
