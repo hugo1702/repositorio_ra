@@ -407,7 +407,6 @@ fun Login(navController: NavHostController, activity: ComponentActivity) {
     }
 }
 
-// Función para manejar mensajes de error en español
 fun getErrorMessageInSpanish(exception: Exception?): String {
     return when (exception?.message) {
         "The email address is badly formatted." -> "El correo tiene un formato incorrecto."
@@ -458,7 +457,6 @@ fun ShowUidScreen(activity: ComponentActivity) {
     var userUid by remember { mutableStateOf<String?>(null) }
     val userPreferencesStore = UserPreferencesStore(activity)
 
-    // Utilizar LaunchedEffect para obtener el UID cuando se carga la vista
     LaunchedEffect(Unit) {
         userUid = userPreferencesStore.getUserUid()
     }
